@@ -32,6 +32,13 @@ def test_zero_sum():
     data = [-2, 1, 1]
     assert my_sum_func(data) == 0
 
+def test_complex():
+    """
+    Test that it can sum a tuple of integers
+    """
+    data = [-2+1j, 1+2j]
+    assert my_sum_func(data) == -1+4j
+
 def test_bad_type():
     data = 'banana'
     with pytest.raises(TypeError):
